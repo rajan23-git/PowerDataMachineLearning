@@ -78,28 +78,9 @@ predictions = model.predict(x_test)
 predictions = np.array(predictions)
 model.save('./lstmModel')
 
-#testingIdx
-# print(np.shape(predictions))
-# def update(val):
-#     pos = slider_position.val
-#     Axis.axis([pos, pos+10, -1, 1])
-#     Plot.canvas.draw_idle()
-
-# Plot, Axis = plt.subplots()
-# plt.subplots_adjust(bottom=0.25)
-# xAxis = np.arange(0, np.size(power))
-# plt.scatter(range(len(power)), power, c='b')
-
-# axis_position = plt.axes([0.2, 0.1, 0.65, 0.03], facecolor = 'White')
-# slider_position = Slider(axis_position,'Pos', 0.1, 90.0)
 
 for i in range(len(predictions)):
     time = np.arange(testingIdx[i], testingIdx[i]+futureSize)
     plt.scatter(time, predictions[i], c='r')
     plt.scatter(time, y_test[i],  c='b')
     plt.show()
-
-
-# slider_position.on_changed(update)
-
-# plt.show()
