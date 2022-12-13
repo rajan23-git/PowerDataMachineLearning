@@ -1,0 +1,2 @@
+Compilation Instructions:
+In order to run predictor_script.py inside the Pranav_Ensemble_LSTM folder, you first need to run ensemble_lstm.py. ensemble_lstm.py builds the LSTM models first. Then predictor_script.py uses these models to make predictions.
